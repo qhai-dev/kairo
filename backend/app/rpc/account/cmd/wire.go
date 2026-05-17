@@ -5,15 +5,15 @@ package main
 
 import (
 	"github.com/google/wire"
-	"github.com/qhai-dev/galio/rpc/account/application"
-	"github.com/qhai-dev/galio/rpc/account/infra"
-	"github.com/qhai-dev/galio/rpc/account/rpc"
+
+	"github.com/qhai-dev/galio/library/galio"
+	"github.com/qhai-dev/galio/rpc/account/server"
 )
 
-func InitializeApp() {
+func inject(*galio.Application) (galio.Server, error) {
 	wire.Build(
-		infra.Provider,
-		application.Provider,
-		rpc.Provider,
+		server.ProviderSet,
 	)
+
+	return nil, nil
 }

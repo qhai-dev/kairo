@@ -34,7 +34,10 @@ export function Sidebar() {
 			<div className="min-h-0 flex-1 overflow-y-auto py-5">
 				<div className="grid w-72 px-5 pb-5">
 					{test.map((item) => (
-						<div key={item.id} className="bg-background-burn flex h-10 w-full items-center px-2">
+						<div
+							key={item.id}
+							className="bg-background-burn flex h-10 w-full items-center px-2"
+						>
 							{item.name}
 						</div>
 					))}

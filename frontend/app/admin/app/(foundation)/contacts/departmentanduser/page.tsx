@@ -13,9 +13,12 @@ const Department = dynamic(() => import("@/components/biz/Department"), {
 	ssr: false,
 });
 
-const ResignedEmployee = dynamic(() => import("@/components/biz/ResignedEmployee"), {
-	ssr: false,
-});
+const ResignedEmployee = dynamic(
+	() => import("@/components/biz/ResignedEmployee"),
+	{
+		ssr: false,
+	},
+);
 
 const tabs = [
 	{
@@ -61,7 +64,11 @@ export default function Page() {
 			</TabsList>
 			{tabs.map((item, index) => {
 				return (
-					<TabsContent key={index} value={item.value} className="px-5 py-5">
+					<TabsContent
+						key={index}
+						value={item.value}
+						className="px-5 py-5"
+					>
 						{item.component}
 					</TabsContent>
 				);

@@ -35,7 +35,10 @@ export function HeaderUser() {
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
 					<Avatar className="flex size-9 cursor-pointer items-center justify-center">
-						<AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+						<AvatarImage
+							src="https://github.com/shadcn.png"
+							alt="@shadcn"
+						/>
 						<AvatarFallback className="h-full w-full bg-red-500"></AvatarFallback>
 					</Avatar>
 				</DropdownMenuTrigger>
@@ -43,10 +46,15 @@ export function HeaderUser() {
 					<DropdownMenuLabel className="flex w-full py-2 pr-2 pl-3">
 						<Space vertical className="grow gap-0" align="start">
 							<Title className="text-sm font-medium">张三</Title>
-							<Text className="text-[12px] leading-[16px]">XXXX科技有限公司</Text>
+							<Text className="text-[12px] leading-[16px]">
+								XXXX科技有限公司
+							</Text>
 						</Space>
 						<Avatar className="flex size-9 shrink-0 items-center">
-							<AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+							<AvatarImage
+								src="https://github.com/shadcn.png"
+								alt="@shadcn"
+							/>
 							<AvatarFallback className="h-full w-full bg-red-500"></AvatarFallback>
 						</Avatar>
 					</DropdownMenuLabel>
@@ -56,20 +64,26 @@ export function HeaderUser() {
 							onClick={() => handleOpenSettingModal("profile")}
 						>
 							<IconUserCircle />
-							<Text className="grow px-1 text-sm font-medium">账户</Text>
+							<Text className="grow px-1 text-sm font-medium">
+								账户
+							</Text>
 						</DropdownMenuItem>
 						<DropdownMenuItem
 							className="flex h-8 items-center gap-1 pr-2 pl-3"
 							onClick={() => handleOpenSettingModal("preference")}
 						>
 							<IconSetting />
-							<Text className="grow px-1 text-sm font-medium">设置</Text>
+							<Text className="grow px-1 text-sm font-medium">
+								设置
+							</Text>
 						</DropdownMenuItem>
 					</DropdownMenuGroup>
 					<DropdownMenuSeparator />
 					<DropdownMenuItem className="flex h-8 items-center gap-1 pr-2 pl-3">
 						<IconExit />
-						<Text className="grow px-1 text-sm font-medium">登出</Text>
+						<Text className="grow px-1 text-sm font-medium">
+							登出
+						</Text>
 					</DropdownMenuItem>
 				</DropdownMenuContent>
 			</DropdownMenu>

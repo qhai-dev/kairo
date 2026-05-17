@@ -4,7 +4,9 @@ import { getTranslations } from "next-intl/server";
 import { Sidebar } from "@/feature/role/components/sidebar";
 import { SidebarInset } from "@/feature/role/components/sidebar-inset";
 
-export async function generateMetadata(parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(
+	parent: ResolvingMetadata,
+): Promise<Metadata> {
 	// TODO Locale
 	// const t = await getTranslations('metadata');
 	return {

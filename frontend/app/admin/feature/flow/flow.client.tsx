@@ -1,6 +1,13 @@
 "use client";
 
-import type { Connection, Edge, EdgeChange, EdgeTypes, Node, NodeChange } from "@xyflow/react";
+import type {
+	Connection,
+	Edge,
+	EdgeChange,
+	EdgeTypes,
+	Node,
+	NodeChange,
+} from "@xyflow/react";
 
 import {
 	addEdge,
@@ -22,7 +29,11 @@ const proOptions = { hideAttribution: true };
 const CustomNode = ({ data }) => {
 	return (
 		<>
-			<NodeToolbar align="center" isVisible={data.toolbarVisible} position={data.toolbarPosition}>
+			<NodeToolbar
+				align="center"
+				isVisible={data.toolbarVisible}
+				position={data.toolbarPosition}
+			>
 				<button>delete</button>
 				<button>copy</button>
 				<button>expand</button>
@@ -42,7 +53,12 @@ const nodeTypes = {
 
 const initialNodes: Node[] = [
 	{ id: "n1", position: { x: 0, y: 0 }, data: { label: "Node 1" } },
-	{ id: "n2", type: "CustomNode", position: { x: 0, y: 100 }, data: { label: "Node 2" } },
+	{
+		id: "n2",
+		type: "CustomNode",
+		position: { x: 0, y: 100 },
+		data: { label: "Node 2" },
+	},
 ];
 const initialEdges: Edge[] = [{ id: "n1-n2", source: "n1", target: "n2" }];
 
@@ -52,16 +68,21 @@ export function TestFlow() {
 
 	const onNodesChange = useCallback(
 		(changes: NodeChange<Node>[]) =>
-			setNodes((nodesSnapshot) => applyNodeChanges(changes, nodesSnapshot)),
+			setNodes((nodesSnapshot) =>
+				applyNodeChanges(changes, nodesSnapshot),
+			),
 		[],
 	);
 	const onEdgesChange = useCallback(
 		(changes: EdgeChange<Edge>[]) =>
-			setEdges((edgesSnapshot) => applyEdgeChanges(changes, edgesSnapshot)),
+			setEdges((edgesSnapshot) =>
+				applyEdgeChanges(changes, edgesSnapshot),
+			),
 		[],
 	);
 	const onConnect = useCallback(
-		(params: Connection) => setEdges((edgesSnapshot) => addEdge(params, edgesSnapshot)),
+		(params: Connection) =>
+			setEdges((edgesSnapshot) => addEdge(params, edgesSnapshot)),
 		[],
 	);
 
@@ -79,7 +100,11 @@ export function TestFlow() {
 					fitView
 				>
 					<Panel position="bottom-left">测试展示内容</Panel>
-					<Background gap={12} color="#ccc" variant={BackgroundVariant.Dots} />
+					<Background
+						gap={12}
+						color="#ccc"
+						variant={BackgroundVariant.Dots}
+					/>
 				</ReactFlow>
 			</ReactFlowProvider>
 		</div>

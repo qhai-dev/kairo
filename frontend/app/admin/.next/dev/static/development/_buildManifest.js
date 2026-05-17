@@ -12,6 +12,17 @@ self.__BUILD_MANIFEST = {
         ],
         "source": "/setting",
         "destination": "/(.)setting"
+      },
+      {
+        "has": [
+          {
+            "type": "header",
+            "key": "next-url",
+            "value": "/.*"
+          }
+        ],
+        "source": "/setting",
+        "destination": "/(.)setting"
       }
     ],
     "fallback": []

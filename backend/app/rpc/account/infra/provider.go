@@ -2,4 +2,4 @@ package infra
 
 import "github.com/google/wire"
 
-var Provider = wire.NewSet()
+var ProviderSet = wire.NewSet()

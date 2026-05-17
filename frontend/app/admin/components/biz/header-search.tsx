@@ -4,7 +4,11 @@ import { IconBellStroked, IconHelpCircleStroked } from "@douyinfe/semi-icons";
 import { QuestionIcon, BellIcon } from "@phosphor-icons/react";
 
 import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export function HeaderSearch() {
 	return (
@@ -21,7 +25,12 @@ export function HeaderSearch() {
 			</Button>
 			<Tooltip>
 				<TooltipTrigger asChild>
-					<Button variant="ghost" theme="ghost" size="icon" className="size-9">
+					<Button
+						variant="ghost"
+						theme="ghost"
+						size="icon"
+						className="size-9"
+					>
 						<BellIcon size={24} weight="light" />
 					</Button>
 				</TooltipTrigger>
@@ -29,7 +38,12 @@ export function HeaderSearch() {
 			</Tooltip>
 			<Tooltip>
 				<TooltipTrigger asChild>
-					<Button variant="ghost" theme="ghost" size="icon" className="size-9">
+					<Button
+						variant="ghost"
+						theme="ghost"
+						size="icon"
+						className="size-9"
+					>
 						<QuestionIcon size={24} weight="light" />
 					</Button>
 				</TooltipTrigger>

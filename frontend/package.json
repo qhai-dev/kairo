@@ -1,12 +1,12 @@
 {
-  "name": "galio",
-  "private": true,
-  "workspaces": [
-    "apis",
-    "app/*",
-    "library/*"
-  ],
-  "devDependencies": {
-    "oxfmt": "^0.48.0"
-  }
+	"name": "galio",
+	"private": true,
+	"workspaces": [
+		"apis",
+		"app/*",
+		"library/*"
+	],
+	"devDependencies": {
+		"oxfmt": "^0.48.0"
+	}
 }

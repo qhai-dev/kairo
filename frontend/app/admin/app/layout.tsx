@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-
 import { getLocale, getTranslations } from "next-intl/server";
 import { PropsWithChildren } from "react";
 import {
@@ -7,7 +6,7 @@ import {
 	DirectionProvider,
 	TooltipProvider,
 } from "@galio/design-component";
-import { languages } from "@/i18n/language";
+// import { languages } from "@/i18n/language";
 
 import TanstackQueryProvider from "@/contexts/tanstack-query-context";
 import NextThemeProvider from "@/contexts/next-theme-context";
@@ -35,13 +34,8 @@ export default async function Layout({ children }: PropsWithChildren) {
 	const dir: Direction = "ltr";
 
 	return (
-		<html
-			lang={lang}
-			dir={dir}
-			suppressHydrationWarning
-			className="h-full overflow-hidden"
-		>
-			<body className="h-full select-auto">
+		<html lang={lang} dir={dir} suppressHydrationWarning>
+			<body className="h-full select-auto overflow-hidden">
 				<NextIntlProvider>
 					<NextThemeProvider>
 						<TanstackQueryProvider>

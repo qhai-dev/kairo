@@ -10,5 +10,5 @@ export default function TanstackQueryProvider({ children }: PropsWithChildren) {
 		<QueryClientProvider client={queryClient}>
 			{children}
 		</QueryClientProvider>
-	)
+	);
 }

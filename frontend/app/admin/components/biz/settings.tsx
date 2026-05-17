@@ -49,10 +49,16 @@ export function Settings() {
 				onValueChange={onTabsChange}
 			>
 				<TabsList className="flex h-full flex-col justify-start gap-y-1">
-					<TabsTrigger value="profile" className="block h-[40[x]] w-[200px] flex-0 bg-green-500">
+					<TabsTrigger
+						value="profile"
+						className="block h-[40[x]] w-[200px] flex-0 bg-green-500"
+					>
 						个人信息
 					</TabsTrigger>
-					<TabsTrigger value="preference" className="block h-[40[x]] w-[200px] flex-0 bg-green-500">
+					<TabsTrigger
+						value="preference"
+						className="block h-[40[x]] w-[200px] flex-0 bg-green-500"
+					>
 						偏好
 					</TabsTrigger>
 				</TabsList>

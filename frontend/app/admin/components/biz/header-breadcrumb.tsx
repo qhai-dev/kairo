@@ -29,8 +29,13 @@ export function HeaderBreadcrumb() {
 						<BreadcrumbItem key={index}>
 							{item.href ? (
 								<>
-									<BreadcrumbLink className="max-w-20 truncate md:max-w-none" asChild>
-										<Link href={item.href}>{item.label}</Link>
+									<BreadcrumbLink
+										className="max-w-20 truncate md:max-w-none"
+										asChild
+									>
+										<Link href={item.href}>
+											{item.label}
+										</Link>
 									</BreadcrumbLink>
 									<BreadcrumbSeparator />
 								</>
