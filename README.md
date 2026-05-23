@@ -1,7 +1,1 @@
-Kubernetes
-
-Helm
-
-ArgoCD
-
-containerd
+# Galio
