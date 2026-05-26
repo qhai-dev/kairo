@@ -1,5 +1,5 @@
 {
-	"name": "@galio/design-component",
+	"name": "@kubase/design-component",
 	"version": "0.0.1",
 	"private": true,
 	"main": "./src/index.ts",

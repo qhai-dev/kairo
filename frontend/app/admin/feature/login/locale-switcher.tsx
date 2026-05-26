@@ -8,7 +8,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 	Globe,
-} from "@galio/design-component";
+} from "@kubase/design-component";
 
 import { languages, Locale, locales } from "@/i18n/language";
 

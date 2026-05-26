@@ -5,7 +5,7 @@ import {
 	ToastProvider,
 	DirectionProvider,
 	TooltipProvider,
-} from "@galio/design-component";
+} from "@kubase/design-component";
 // import { languages } from "@/i18n/language";
 
 import TanstackQueryProvider from "@/contexts/tanstack-query-context";

@@ -1,5 +1,0 @@
-package etcd
-
-func New() {
-
-}

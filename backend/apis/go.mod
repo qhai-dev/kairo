@@ -1,3 +1,3 @@
-module github.com/qhai-dev/galio/apis
+module github.com/qhai-dev/kubase/apis
 
 go 1.26.1

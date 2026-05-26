@@ -7,7 +7,7 @@ import {
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
-} from "@galio/design-component";
+} from "@kubase/design-component";
 
 export function NavSecondary({
 	items,

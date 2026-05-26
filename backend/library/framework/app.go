@@ -1,4 +1,4 @@
-package galio
+package framework
 
 import (
 	"context"
@@ -6,7 +6,6 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/qhai-dev/galio/library/galio/conf"
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 )
@@ -27,10 +26,6 @@ func New() *App {
 	app := &App{
 		ctx: context.Background(),
 	}
-
-	cfg := conf.Load()
-
-	app.conf = cfg
 
 	return app
 }

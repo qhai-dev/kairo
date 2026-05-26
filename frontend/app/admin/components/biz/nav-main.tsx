@@ -13,7 +13,7 @@ import {
 	SidebarMenuSub,
 	SidebarMenuSubButton,
 	SidebarMenuSubItem,
-} from "@galio/design-component";
+} from "@kubase/design-component";
 
 export function NavMain({
 	items,

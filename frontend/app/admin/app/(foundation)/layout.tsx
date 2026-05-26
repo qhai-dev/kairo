@@ -11,7 +11,7 @@ import {
 	Sidebar,
 	SidebarContent,
 	SidebarHeader,
-} from "@galio/design-component";
+} from "@kubase/design-component";
 const data = {
 	user: {
 		name: "shadcn",

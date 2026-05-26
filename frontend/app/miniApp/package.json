@@ -1,5 +1,5 @@
 {
-	"name": "@galio/miniapp",
+	"name": "@kubase/miniapp",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {

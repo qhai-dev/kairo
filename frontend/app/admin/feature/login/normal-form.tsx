@@ -12,7 +12,7 @@ import {
 	FieldGroup,
 	FieldLabel,
 	Input,
-} from "@galio/design-component";
+} from "@kubase/design-component";
 
 export function NormalForm() {
 	const t = useTranslations("signin");

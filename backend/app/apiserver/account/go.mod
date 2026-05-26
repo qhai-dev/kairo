@@ -1,3 +1,3 @@
-module github.com/qhai-dev/galio/apiserver/account
+module github.com/qhai-dev/kubase/apiserver/account
 
 go 1.26.1

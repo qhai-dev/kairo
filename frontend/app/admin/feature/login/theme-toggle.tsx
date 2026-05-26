@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Button } from "@galio/design-component";
+import { Button } from "@kubase/design-component";
 
 export function ThemeToggle() {
 	const { theme, setTheme } = useTheme();

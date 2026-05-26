@@ -1,5 +1,5 @@
 {
-	"name": "galio",
+	"name": "kubase",
 	"private": true,
 	"workspaces": [
 		"frontend/*",

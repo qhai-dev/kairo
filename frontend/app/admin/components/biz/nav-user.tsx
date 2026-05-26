@@ -24,7 +24,7 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 	useSidebar,
-} from "@galio/design-component";
+} from "@kubase/design-component";
 
 export function NavUser({
 	user,

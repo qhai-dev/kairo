@@ -3,14 +3,14 @@ package handler
 import (
 	"fmt"
 
-	"github.com/qhai-dev/galio/library/galio"
+	"github.com/qhai-dev/kubase/library/framework"
 )
 
 type AccountService struct {
 	//
 }
 
-func NewAccountService(app *galio.App) *AccountService {
+func NewAccountService(app *framework.App) *AccountService {
 	return &AccountService{
 		//
 	}

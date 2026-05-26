@@ -6,13 +6,10 @@ package main
 import (
 	"github.com/google/wire"
 	"github.com/qhai-dev/kubase/library/framework"
-	"github.com/qhai-dev/kubase/service/account/rpc"
 )
 
 func initialize(*framework.App) error {
-	wire.Build(
-		rpc.ProviderSet,
-	)
+	wire.Build()
 
 	return nil
 }
