@@ -1,4 +1,4 @@
-module github.com/qhai-dev/kairo/service/account
+module github.com/qhai-dev/kairo/rpc/account
 
 go 1.26.1
 

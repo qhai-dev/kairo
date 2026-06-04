@@ -1,3 +1,3 @@
-module github.com/qhai-dev/kubun/backend/app/gateway
+module github.com/qhai-dev/kairo/gateway
 
 go 1.26.1
