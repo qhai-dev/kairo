@@ -6,31 +6,147 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-separator: var(--separator);
-}
+	/* Background & Foreground */
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
 
-html[data-theme="dark"] {
-    color-scheme: dark;
-    /*--foreground: #0f0f0f;*/
-    --background: #1a1a1a;
-    --foreground: #000000;
-    /*--background: #000000;*/
-    /*--background: oklch(0.232 0.0057 285.95);*/
-    /*--foreground: oklch(12% 0.0015 253.83);*/
-    --separator: oklch(25% 0.0015 253.83);
+	/* Surface */
+	--color-surface: var(--surface);
+	--color-surface-foreground: var(--surface-foreground);
+	--color-surface-secondary: var(--surface-secondary);
+	--color-surface-secondary-foreground: var(--surface-secondary-foreground);
+	--color-surface-tertiary: var(--surface-tertiary);
+	--color-surface-tertiary-foreground: var(--surface-tertiary-foreground);
+
+	/* Field */
+	--color-field-background: var(--field-background);
+	--color-field-border: var(--field-border);
+	--color-field-foreground: var(--field-foreground);
+	--color-field-placeholder: var(--field-placeholder);
+
+	/* Overlay, Separator, Border */
+	--color-overlay: var(--overlay);
+	--color-overlay-foreground: var(--overlay-foreground);
+	--color-separator: var(--separator);
+	--color-border: var(--border);
+
+	/* Default */
+	--color-default: var(--default);
+	--color-default-foreground: var(--default-foreground);
+
+	/* Muted */
+	--color-muted: var(--muted);
+
+	/* Accent */
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+
+	/* Danger */
+	--color-danger: var(--danger);
+	--color-danger-foreground: var(--danger-foreground);
+
+	/* Warning */
+	--color-warning: var(--warning);
+	--color-warning-foreground: var(--warning-foreground);
+
+	/* Success */
+	--color-success: var(--success);
+	--color-success-foreground: var(--success-foreground);
+
+	/* Focus */
+	--color-focus: var(--focus);
+
+	/* Scrollbar */
+	--color-scrollbar: var(--scrollbar);
+
+	/* Segment */
+	--color-segment: var(--segment);
+	--color-segment-foreground: var(--segment-foreground);
+
+	/* Border Radius */
+	--radius: 0.5rem;
+	--field-radius: 0.75rem;
+
+	/* Font Family */
+	--font-sans: var(--font-inter);
 }
 
 html[data-theme="light"] {
-    color-scheme: light;
-    /* oklch(0.2103 0.0059 285.89);*/
-    /*--black: oklch(0% 0 0);*/
-    /*--snow: oklch(0.9911 0 0);*/
+	color-scheme: light;
+	/* Theme Colors (Light Mode) */
+	--accent: oklch(62.04% 0.195 253.83);
+	--accent-foreground: oklch(99.11% 0 0);
+	--background: oklch(97.02% 0.0015 253.83);
+	--border: oklch(90% 0.0015 253.83);
+	--danger: oklch(65.32% 0.2335 25.74);
+	--danger-foreground: oklch(99.11% 0 0);
+	--default: oklch(94% 0.0015 253.83);
+	--default-foreground: oklch(21.03% 0.0059 253.83);
+	--field-background: oklch(100% 0.0008 253.83);
+	--field-border: transparent;
+	--field-foreground: oklch(21.03% 0.0015 253.83);
+	--field-placeholder: oklch(55.17% 0.003 253.83);
+	--focus: oklch(62.04% 0.195 253.83);
+	--foreground: oklch(21.03% 0.0015 253.83);
+	--muted: oklch(55.17% 0.003 253.83);
+	--overlay: oklch(100% 0.0004 253.83);
+	--overlay-foreground: oklch(21.03% 0.0015 253.83);
+	--scrollbar: oklch(87.1% 0.0015 253.83);
+	--segment: oklch(100% 0.0015 253.83);
+	--segment-foreground: oklch(21.03% 0.0015 253.83);
+	--separator: oklch(92% 0.0015 253.83);
+	--success: oklch(73.29% 0.1941 150.81);
+	--success-foreground: oklch(21.03% 0.0059 150.81);
+	--surface: oklch(100% 0.0008 253.83);
+	--surface-foreground: oklch(21.03% 0.0015 253.83);
+	--surface-secondary: oklch(95.24% 0.0012 253.83);
+	--surface-secondary-foreground: oklch(21.03% 0.0015 253.83);
+	--surface-tertiary: oklch(93.73% 0.0012 253.83);
+	--surface-tertiary-foreground: oklch(21.03% 0.0015 253.83);
+	--warning: oklch(78.19% 0.159 72.33);
+	--warning-foreground: oklch(21.03% 0.0059 72.33);
 
-    --background: #f3f3f3;
-    --foreground: #ffffff;
-    /*--background: oklch(0.94 0.0071 268.55);*/
-    /*--foreground: oklch(97.02% 0.0015 253.83);*/
-    --separator: oklch(92% 0.0015 253.83);
+	/* Border Radius */
+	--radius: 0.5rem;
+	--field-radius: 0.75rem;
+
+	/* Font Family */
+	/* Make sure to load Inter font in your app */
+	--font-sans: var(--font-inter);
+}
+
+html[data-theme="dark"] {
+	color-scheme: dark;
+	/* Theme Colors (Dark Mode) */
+	--accent: oklch(62.04% 0.195 253.83);
+	--accent-foreground: oklch(99.11% 0 0);
+	--background: oklch(12% 0.0015 253.83);
+	--border: oklch(28% 0.0015 253.83);
+	--danger: oklch(59.4% 0.1973 24.63);
+	--danger-foreground: oklch(99.11% 0 0);
+	--default: oklch(27.4% 0.0015 253.83);
+	--default-foreground: oklch(99.11% 0 0);
+	--field-background: oklch(21.03% 0.003 253.83);
+	--field-border: transparent;
+	--field-foreground: oklch(99.11% 0.0015 253.83);
+	--field-placeholder: oklch(70.5% 0.003 253.83);
+	--focus: oklch(62.04% 0.195 253.83);
+	--foreground: oklch(99.11% 0.0015 253.83);
+	--muted: oklch(70.5% 0.003 253.83);
+	--overlay: oklch(21.03% 0.003 253.83);
+	--overlay-foreground: oklch(99.11% 0.0015 253.83);
+	--scrollbar: oklch(70.5% 0.0015 253.83);
+	--segment: oklch(39.64% 0.0015 253.83);
+	--segment-foreground: oklch(99.11% 0.0015 253.83);
+	--separator: oklch(25% 0.0015 253.83);
+	--success: oklch(73.29% 0.1941 150.81);
+	--success-foreground: oklch(21.03% 0.0059 150.81);
+	--surface: oklch(21.03% 0.003 253.83);
+	--surface-foreground: oklch(99.11% 0.0015 253.83);
+	--surface-secondary: oklch(25.7% 0.0023 253.83);
+	--surface-secondary-foreground: oklch(99.11% 0.0015 253.83);
+	--surface-tertiary: oklch(27.21% 0.0023 253.83);
+	--surface-tertiary-foreground: oklch(99.11% 0.0015 253.83);
+	--warning: oklch(82.03% 0.1392 76.34);
+	--warning-foreground: oklch(21.03% 0.0059 76.34);
 }

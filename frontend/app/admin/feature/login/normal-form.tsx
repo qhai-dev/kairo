@@ -1,13 +1,19 @@
-"use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useTranslations } from "next-intl";
-import { Controller, useForm } from "react-hook-form";
-import { z } from "zod";
-
-import { Button, Field, FieldError, FieldGroup, FieldLabel, Input } from "@kairo/shadcn-semi";
+"use client"
+import { zodResolver } from "@hookform/resolvers/zod"
+import {
+	Button,
+	Field,
+	FieldError,
+	FieldGroup,
+	FieldLabel,
+	Input,
+} from "@kairo/shadcn-semi"
+import { useTranslations } from "next-intl"
+import { Controller, useForm } from "react-hook-form"
+import { z } from "zod"
 
 export function NormalForm() {
-	const t = useTranslations("signin");
+	const t = useTranslations("signin")
 
 	const formSchema = z.object({
 		account: z.string().min(2, {
@@ -16,7 +22,7 @@ export function NormalForm() {
 		password: z.string().min(2, {
 			message: `${t("error-password")}`,
 		}),
-	});
+	})
 
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
@@ -24,14 +30,17 @@ export function NormalForm() {
 			account: "",
 			password: "",
 		},
-	});
+	})
 
 	async function onSubmit(values: z.infer<typeof formSchema>) {
-		console.log(values);
+		console.log(values)
 	}
 
 	return (
-		<form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-y-4">
+		<form
+			onSubmit={form.handleSubmit(onSubmit)}
+			className="flex flex-col gap-y-4"
+		>
 			<FieldGroup>
 				<Controller
 					name="account"
@@ -66,5 +75,5 @@ export function NormalForm() {
 			</FieldGroup>
 			<Button type="submit">{t("login")}</Button>
 		</form>
-	);
+	)
 }
