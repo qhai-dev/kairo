@@ -1,1 +1,1 @@
-// export {} from './locales'
+export { LOCALES } from "./constants"
