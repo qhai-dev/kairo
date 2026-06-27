@@ -1,8 +1,0 @@
-info() {
-    echo "[setup] $*";
-}
-
-
-info "1"
-
-info "2"

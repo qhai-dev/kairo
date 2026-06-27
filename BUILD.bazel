@@ -1,4 +1,6 @@
 load("@gazelle//:def.bzl", "gazelle")
+load("@bazel_env.bzl", "bazel_env")
+load("@gazelle//:go_tools.bzl", "GO_TOOLS")
 
 # Gazelle generates and updates BUILD files for Go packages.
 # Docs: https://github.com/bazel-contrib/bazel-gazelle
@@ -9,4 +11,11 @@ load("@gazelle//:def.bzl", "gazelle")
 gazelle(
     name = "gazelle",
     prefix = "github.com/qhai-dev/kairo",
+)
+
+bazel_env(
+    name = "bazel_env",
+    tools = {
+        "go": "@rules_go//go",
+    } | GO_TOOLS,
 )
