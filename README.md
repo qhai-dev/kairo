@@ -35,3 +35,8 @@ go install
 air
 lefthook
 sqlc
+wire
+buf
+protoc-gen-go
+protoc-gen-go-grpc
+buildifier

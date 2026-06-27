@@ -1,6 +1,5 @@
 module(
     name = "kairo",
-    version = "1.0.0",
 )
 
 bazel_dep(
@@ -85,7 +84,7 @@ bazel_dep(
 )
 bazel_dep(
     name = "aspect_rules_js",
-    version = "3.2.2"
+    version = "3.2.2",
 )
 bazel_dep(
     name = "aspect_rules_ts",
@@ -115,7 +114,7 @@ use_repo(npm, "npm")
 
 typescript = use_extension("@aspect_rules_ts//ts:extensions.bzl", "ext")
 typescript.deps(
-    name: "typescript",
+    name = "typescript",
     ts_version_from = "//:package.json",
 )
-use_repo(typescript,"typescript")
+use_repo(typescript, "typescript")
