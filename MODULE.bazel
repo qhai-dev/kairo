@@ -36,6 +36,8 @@ use_repo(
     "com_github_spf13_viper_remote",
     "io_etcd_go_etcd_client_v3",
     "org_golang_google_grpc",
+    "org_golang_google_grpc_cmd_protoc_gen_go_grpc",
+    "org_golang_google_protobuf",
     "org_uber_go_zap",
 )
 
@@ -46,6 +48,14 @@ bazel_dep(
 bazel_dep(
     name = "rules_buf",
     version = "0.5.4",
+)
+bazel_dep(
+    name = "googleapis",
+    version = "0.0.0-20260623-b6f9ff05",
+)
+bazel_dep(
+    name = "grpc_ecosystem_grpc_gateway",
+    version = "2.29.0",
 )
 
 buf = use_extension("@rules_buf//buf:extensions.bzl", "buf")

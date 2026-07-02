@@ -1,5 +1,6 @@
 load("@protobuf//bazel:proto_library.bzl", "proto_library")
 load("@rules_buf//buf:defs.bzl", "buf_lint_test")
+load("@rules_go//go:def.bzl", "go_library")
 
 proto_library(
     name = "v1_proto",
@@ -13,4 +14,27 @@ buf_lint_test(
     config = "//:buf.yaml",
     module = "backend/kapis",
     targets = [":v1_proto"],
+)
+
+go_library(
+    name = "test2",
+    srcs = [
+        "test2.pb.go",
+        "test2.pb.gw.go",
+        "test2_grpc.pb.go",
+    ],
+    importpath = "github.com/qhai-dev/kairo/backend/kapis/test2/v1",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@grpc_ecosystem_grpc_gateway//runtime",
+        "@grpc_ecosystem_grpc_gateway//utilities",
+        "@org_golang_google_grpc//:grpc",
+        "@org_golang_google_grpc//codes",
+        "@org_golang_google_grpc//grpclog",
+        "@org_golang_google_grpc//metadata",
+        "@org_golang_google_grpc//status",
+        "@org_golang_google_protobuf//proto",
+        "@org_golang_google_protobuf//reflect/protoreflect",
+        "@org_golang_google_protobuf//runtime/protoimpl",
+    ],
 )
