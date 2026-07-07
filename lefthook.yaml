@@ -1,6 +1,15 @@
 # For details on lefthook.yaml configuration, visit https://lefthook.dev/configuration/
 pre-push:
+  parallel: true
   jobs:
+    - name: lint backend
+      run: echo "hello backend"
+    - name: lint frontend
+      run: echo "hello frontend"
 pre-commit:
   parallel: true
   jobs:
+    - name: lint backend
+      run: echo "hello backend"
+    - name: lint frontend
+      run: echo "hello frontend"
