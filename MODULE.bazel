@@ -80,7 +80,7 @@ pull(
 
 bazel_dep(
     name = "rules_nodejs",
-    version = "6.7.4",
+    version = "6.7.5",
 )
 bazel_dep(
     name = "aspect_rules_js",
@@ -93,6 +93,7 @@ bazel_dep(
 
 node = use_extension("@rules_nodejs//nodejs:extensions.bzl", "node")
 node.toolchain(
+    name = "nodejs",
     node_version_from_nvmrc = "//:.nvmrc",
 )
 use_repo(node, "nodejs_toolchains")
@@ -117,3 +118,18 @@ typescript.deps(
     ts_version_from = "//:package.json",
 )
 use_repo(typescript, "npm_typescript")
+
+bazel_dep(
+    name = "bazel_env.bzl",
+    version = "0.8.0",
+)
+bazel_dep(
+    name = "rules_multitool",
+    version = "1.11.1",
+)
+
+multitool = use_extension("@rules_multitool//multitool:extension.bzl", "multitool")
+multitool.hub(
+    lockfile = "//tools:multitool.lock.json",
+)
+use_repo(multitool, "multitool")
