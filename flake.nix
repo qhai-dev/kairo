@@ -52,6 +52,10 @@
               nixd
               nixfmt
             ];
+
+            shellHook = ''
+              export PATH=$PWD/tools:$PATH
+            '';
           };
         }
       );
