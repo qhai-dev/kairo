@@ -8,3 +8,5 @@ breaking:
     - FILE
 modules:
   - path: backend/kapis
+deps:
+  - buf.build/bufbuild/protovalidate
