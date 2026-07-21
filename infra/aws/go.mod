@@ -1,3 +1,8 @@
 module github.com/qhai-dev/kairo/infra/aws
 
-go 1.26.4
+go 1.25
+
+require (
+	github.com/pulumi/pulumi-aws/sdk/v7 v7.35.0
+	github.com/pulumi/pulumi/sdk/v3 v3.253.0
+)
