@@ -12,6 +12,8 @@ npm_link_all_packages(
 # gazelle:exclude docs
 # gazelle:exclude frontend
 # gazelle:exclude scripts
+# gazelle:exclude tests
+# gazelle:exclude tools
 gazelle(
     name = "gazelle",
 )
