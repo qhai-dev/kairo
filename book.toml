@@ -1,6 +1,6 @@
 [book]
-title = "development documentation"
+title = "developer Documentation"
 authors = ["qhai-dev"]
-description = "The is k1 development docs"
+description = "A full-stack development framework for the cloud-native"
 src="docs"
 language = "zh-CN"
