@@ -91,3 +91,4 @@ multitool.hub(
 use_repo(multitool, "multitool")
 
 bazel_dep(name = "bazel_env.bzl", version = "0.8.0")
+bazel_dep(name = "rules_rust_mdbook", version = "0.71.3")
